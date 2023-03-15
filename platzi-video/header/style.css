@@ -2,11 +2,14 @@ body {
   font-family: "Lobster", cursive;
   margin: 0;
 }
+html {
+  font-size: 62.5%;
+}
 
 .header {
   width: 100%;
   height: 12.5vh;
-  background-color: rgba(238, 0, 0, 1);
+  background-color: rgba(109, 19, 132, 1);
   display: flex;
   justify-content: space-between;
 }
@@ -24,7 +27,7 @@ body {
   padding: 0;
   width: 100px;
   text-align: right;
-  margin: 0px 0px 0px -14px;
+  margin: 0px 0px 0px -24px;
 }
 
 .header__menu--profile {
@@ -34,8 +37,8 @@ body {
   cursor: pointer;
 }
 .header__menu--profile img {
-    border: 1px solid black;
-    border-radius: 50%;
+  border: 1px solid black;
+  border-radius: 50%;
   margin-right: 8px;
   height: 40px;
 }
@@ -56,26 +59,50 @@ ul:hover {
   text-decoration: none;
 }
 .header__menu li a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
-
-
-section {
-  background-image: radial-gradient(
-    50vh at 50% 50%,
-    rgba(238, 0, 0, 1) 0%,
-    rgba(0, 0, 0, 1) 100.7%
-  );
+.main {
+  height: 300px;
   width: 100%;
   height: 75vh;
+  background-image: linear-gradient(
+    179deg,
+    rgba(109, 19, 132, 1) 18.4%,
+    rgba(245, 135, 75, 1) 108.3%
+  );
+}
+.main__title {
+  color: white;
+  font-size: 2.5rem;
+  margin-top: 0;
+}
+.main__input {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid white;
+  border-radius: 2.5rem;
+  color: white;
+  font-family: "Lobster", cursive;
+  font-size: 1.6rem;
+  outline: none;
+  height: 50px;
+  padding: 0 20px;
+  width: 70%;
+}
+
+.main__input:hover {
+  box-shadow: 0 1px 6px 0 black;
+  border-color: white;
+}
+
+::placeholder {
+  color: white;
 }
 
 footer {
-  background-color: rgba(0, 0, 0, 1);
+  background-color: rgba(245, 135, 75, 1);
   width: 100%;
   height: 12.5vh;
   outline-style: solid;
-  outline-color: red;
-  outline-width: 5px;
+  outline-width: 2px;
 }
