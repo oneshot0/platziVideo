@@ -1,0 +1,248 @@
+body {
+  font-family: "Lobster", cursive;
+  margin: 0;
+  background: linear-gradient(
+    rgba(148, 14, 60, 1) 50.9%,
+    rgba(3, 22, 27, 1) 100.3%
+  );
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.header {
+  align-items: center;
+  background-color: transparent;
+  color: white;
+  display: flex;
+  height: 100px;
+  justify-content: space-between;
+  top: 0px;
+  width: 100%;
+}
+
+.header__img {
+  margin-left: 30px;
+  width: 200px;
+}
+
+.header__menu {
+  margin-top: -14px;
+  margin-right: 24px;
+}
+.header__menu ul {
+  display: none;
+  list-style: none;
+  position: absolute;
+  padding: 0;
+  width: 100px;
+  text-align: right;
+  margin: 0px 0px 0px -14px;
+}
+.header__menu:hover ul,
+ul:hover {
+  display: block;
+}
+.header__menu li {
+  font-size: 1.6rem;
+  margin: 4px 0px;
+}
+.header__menu li a {
+  color: white;
+  text-decoration: none;
+}
+.header__menu li a:hover {
+  text-decoration: underline;
+}
+
+.header__menu--profile {
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.header__menu--profile img {
+  border: 1px solid black;
+  border-radius: 50%;
+  margin-right: 8px;
+  height: 40px;
+}
+.header__menu--profile p {
+  margin: 0px;
+  color: white;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  border-radius: 0px 0px 40px 40px;
+}
+.main__title {
+  color: white;
+  font-size: 2.5rem;
+}
+.categories__title {
+  color: white;
+  font-size: 1.6rem;
+  position: absolute;
+  padding-left: 30px;
+  width: 100%;
+}
+
+.main__input {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 2.5rem;
+  color: white;
+  font-family: "Lobster", cursive;
+  font-size: 1.6rem;
+  outline: none;
+  height: 50px;
+  padding: 0 20px;
+  width: 70%;
+}
+
+.main__input:hover {
+  box-shadow: 0 1px 6px 0 white;
+  border: none;
+}
+
+::placeholder {
+  color: white;
+}
+
+.carousel {
+  width: 100%;
+  overflow: scroll;
+  padding-left: 30px;
+  position: relative;
+  
+}
+
+/* ---------------------scrollbar---------------------*/
+::-webkit-scrollbar{
+  height: 5px;
+}
+::-webkit-scrollbar-track{
+  background: rgba(190, 189, 189, 0.219);
+}
+::-webkit-scrollbar-thumb{
+  background: rgba(255, 255, 255, 0.281);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.699);
+}
+.carousel__container {
+  transition: 450ms -webkit-transform;
+  transition: 450ms transform;
+  transition: 450ms transform, 450ms -webkit-transform;
+  font-size: 0;
+  white-space: nowrap;
+  margin: 70px 0px;
+  padding-bottom: 10px;
+}
+.carousel__container:hover .carousel-item {
+  opacity: 0.3;
+}
+.carousel__container:hover .carousel-item:hover {
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+  opacity: 1;
+}
+
+.carousel-item {
+  width: 200px;
+  height: 250px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 10px;
+  display: inline-block;
+  cursor: pointer;
+  transition: 450ms all;
+  transform-origin: center left;
+  position: relative;
+  margin-right: 8px;
+  font-size: 2rem;
+}
+.carousel-item:hover ~ .carousel-item {
+  transform: translate3d(100px, 0, 0);
+}
+
+.carousel-item__img {
+  width: 200px;
+  height: 250px;
+  /* Con esto la imagen recupera su forma original */
+  object-fit: cover;
+}
+.carousel-item__details {
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.9%) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  font-size: 1rem;
+  opacity: 0;
+  transition: 450ms opacity;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+.carousel-item__details img {
+  height: 20px;
+}
+
+.carousel-item:hover .carousel-item__details {
+  opacity: 1;
+}
+
+.carousel-item__details--title {
+  color: white;
+  margin: 5px 0px 0px 0px;
+}
+
+.carousel-item__details--subtitle {
+  color: white;
+  font-size: 0.8rem;
+  margin: 4px 0px;
+}
+
+
+.footer {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  background: transparent;
+}
+
+.footer a {
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: none;
+  padding-left: 30px;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 600px) {
+  .main__description--title {
+    font-size: 30px;
+  }
+
+  .footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
